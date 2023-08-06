@@ -3,7 +3,11 @@ cask "font-offlig" do
   sha256 "dac9b2a0aa1e42eb072bd4312ef38c9572a56ae5a3c7ab9f90c2e4059a9d1694"
 
   url "https://github.com/sjrmanning/Offlig/archive/#{version}.zip"
-  appcast "https://github.com/sjrmanning/Offlig/releases.atom"
+
+  livecheck do
+    url :homepage
+    strategy :github_latest
+  end
   name "Office Code Pro"
   homepage "https://github.com/sjrmanning/Offlig"
 
